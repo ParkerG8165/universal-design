@@ -6,149 +6,332 @@
     <title>Great Molasses Flood</title>
 
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            color: #222;
+            background-color: #f5f5f5;
+        }
 
+        header {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 30px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        figure {
+            margin: 25px auto;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        blockquote {
+            margin: 25px 30px;
+            padding: 15px 25px;
+            border-left: 5px solid #888;
+            background-color: #f1f1f1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #bbb;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        /* Hide only visually, but have it available for screen readers: */
         .sr-only {
-          border: 0;
-          clip: rect(0, 0, 0, 0);
-          height: 1px;
-          margin: -1px;
-          overflow: hidden;
-          padding: 0;
-          position: absolute;
-          white-space: nowrap;
-          width: 1px;
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
         }
     </style>
 </head>
 
-<body id="top">
+<body>
 
-    <nav>
-        <h2 class="sr-only">Article Navigation</h2>
+    <header>
+        <h1>Great Molasses Flood</h1>
+
+        <p>
+            The Great Molasses Flood, also known as the Boston Molasses Disaster,
+            was a disaster that occurred on January 15, 1919, in the North End
+            neighborhood of Boston, Massachusetts.
+        </p>
+
+        <p>
+            A large storage tank filled with approximately 2.3 million U.S.
+            gallons of molasses burst, sending a large wave of molasses through
+            the surrounding streets. The disaster killed 21 people and injured
+            approximately 150 others.
+        </p>
+    </header>
+
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="#background">Background</a></li>
             <li><a href="#flood">Flood</a></li>
             <li><a href="#aftermath">Aftermath</a></li>
             <li><a href="#causes">Causes</a></li>
-            <li><a href="#area-today">Area today</a></li>
-            <li><a href="#popular-culture">In popular culture</a></li>
-            <li><a href="#see-also">See also</a></li>
-            <li><a href="#notes">Notes</a></li>
+            <li><a href="#area-today">Area Today</a></li>
+            <li><a href="#popular-culture">In Popular Culture</a></li>
+            <li><a href="#see-also">See Also</a></li>
             <li><a href="#references">References</a></li>
-            <li><a href="#further-reading">Further reading</a></li>
-            <li><a href="#external-links">External links</a></li>
         </ul>
     </nav>
 
     <main>
-        <article>
 
-            <header>
-                <h1>Great Molasses Flood</h1>
-            </header>
+        <section id="background">
+            <h2>Background</h2>
 
-            <section>
-                <h2 class="sr-only">Introduction</h2>
+            <p>
+                Molasses can be fermented to produce ethanol, which was used in
+                alcoholic beverages and was also an important component in
+                munitions. The disaster occurred in Boston's North End at the
+                Purity Distilling Company facility at 529 Commercial Street near
+                Keany Square.
+            </p>
 
+            <p>
+                A considerable amount of molasses was stored at the facility.
+                The Commercial Street tank was located next to Boston Harbor and
+                was used to receive molasses from ships and store it before the
+                material was transferred by pipeline to the Purity ethanol plant
+                in nearby Cambridge.
+            </p>
+
+            <p>
+                The tank stood approximately 50 feet tall and 90 feet in
+                diameter. It could contain as much as 2.3 million U.S. gallons
+                of molasses.
+            </p>
+        </section>
+
+        <section id="flood">
+            <h2>Flood</h2>
+
+            <figure>
+                <img src="images/boston-molasses-area-map.png"
+                     alt="Map of downtown Boston showing the area affected by the Great Molasses Flood">
+                <figcaption>
+                    Modern downtown Boston with the molasses flood area circled
+                </figcaption>
+            </figure>
+
+            <p>
+                On January 15, 1919, temperatures in Boston had risen above
+                40 degrees Fahrenheit (4 degrees Celsius), climbing rapidly
+                from the frigid temperatures of the preceding days. On the
+                previous day, a ship had delivered a fresh load of molasses,
+                which had been warmed to decrease its viscosity for transfer.
+            </p>
+
+            <p>
+                Possibly due to the thermal expansion of the older, colder
+                molasses already inside the tank, the tank burst open and
+                collapsed at approximately 12:30 p.m. Witnesses reported that
+                they felt the ground shake and heard a roar as it collapsed.
+                Others described a tremendous crashing sound, a deep growling,
+                and a sound like a machine gun as the rivets shot out of the
+                tank.
+            </p>
+
+            <p>
+                The density of molasses is about 1.4 metric tons per cubic
+                meter, making it approximately 40 percent denser than water.
+                The collapse released a large amount of potential energy.
+                The resulting wave of molasses reached approximately 25 feet
+                high at its peak and moved at an estimated 35 miles per hour.
+            </p>
+
+            <p>
+                The wave was powerful enough to drive steel panels from the
+                burst tank against the girders of the adjacent Boston Elevated
+                Railway's Atlantic Avenue structure and temporarily tip a
+                streetcar from the railway's tracks. Nearby buildings were
+                swept from their foundations and crushed. Several blocks were
+                flooded to a depth of approximately 2 to 3 feet.
+            </p>
+
+            <p>
+                Stephen Puleo quotes a report from <em>The Boston Post</em>:
+            </p>
+
+            <blockquote>
                 <p>
-                    The <strong>Great Molasses Flood</strong>, also known as the
-                    <strong>Boston Molasses Disaster</strong>,<sup><a href="#ref-1">[1]</a></sup>
-                    <sup><a href="#ref-2">[2]</a></sup> was a
-                    <a href="https://en.wikipedia.org/wiki/Disaster">disaster</a>
-                    that occurred on January 15, 1919, in the
-                    <a href="https://en.wikipedia.org/wiki/North_End,_Boston">North End</a>
-                    neighborhood of
-                    <a href="https://en.wikipedia.org/wiki/Boston">Boston</a>, Massachusetts.
+                    Molasses, waist deep, covered the street and swirled and
+                    bubbled about the wreckage. Here and there struggled a form;
+                    whether it was an animal or human being was impossible to
+                    tell. Only an upheaval, a thrashing about in the sticky
+                    mass, showed where any life was. Horses died like so many
+                    flies.
                 </p>
+            </blockquote>
+        </section>
 
-                <p>
-                    A large storage tank filled with 2.3 million U.S. gallons (8,700 cubic meters)
-                    of <a href="https://en.wikipedia.org/wiki/Molasses">molasses</a>, weighing approximately
-                    13,000 short tons (12,000 metric tons) burst, and the resultant wave of molasses
-                    rushed through the streets at an estimated 35 miles per hour (56 kilometers per hour),
-                    killing 21 and injuring 150 people.<sup><a href="#ref-4">[4]</a></sup>
-                    Following a two-week long cleanup effort, the event entered local
-                    <a href="https://en.wikipedia.org/wiki/Folklore">folklore</a> and residents reported
-                    for decades afterwards that the area still smelled of molasses on hot summer days.
-                </p>
-            </section>
+        <section id="aftermath">
+            <h2>Aftermath</h2>
 
-            <section id="background">
-                <h2>Background</h2>
+            <p>
+                First on the scene were 116 cadets under the direction of Commander H. J.
+                Mellish, who stepped off USS <em>Nantucket</em>, a training ship of the
+                Massachusetts Nautical School. They ran several blocks toward the accident
+                and entered the knee-deep molasses to pull out victims, while others kept
+                bystanders back.
+            </p>
 
-                <figure>
-                    <img src="images/BostonPost.jpg"
-                         alt="The front page of an old newspaper. The headline reads, HUGE MOLASSES TANK EXPLODES IN NORTH END; 11 DEAD, 50 HURT"
-                         width="250">
-                    <figcaption>Coverage from <em>The Boston Post</em></figcaption>
-                </figure>
+            <p>
+                Shortly after, Boston police, Red Cross workers, Army personnel, and Navy personnel
+                arrived. Rescue efforts continued for several days. Many victims were so covered
+                in molasses that they were unrecognizable. The rescue workers worked through
+                the thick molasses, which had hardened in the cold air, making search operations
+                exceptionally difficult.
+            </p>
+        </section>
 
-                <p>
-                    Molasses can be fermented to produce
-                    <a href="https://en.wikipedia.org/wiki/Ethanol">ethanol</a>, the active ingredient
-                    in alcoholic beverages and a key component in munitions.<sup><a href="#ref-7">[7]</a></sup>
-                    The disaster occurred in
-                    <a href="https://en.wikipedia.org/wiki/North_End,_Boston">Boston's North End</a>
-                    at the
-                    <a href="https://en.wikipedia.org/wiki/Purity_Distilling_Company">Purity Distilling Company</a>
-                    facility at 529 Commercial Street near Keany Square. A considerable amount of molasses
-                    had been stored there by the company, which used the Commercial Street tank, located
-                    adjacent to
-                    <a href="https://en.wikipedia.org/wiki/Boston_Harbor">Boston Harbor</a>, to offload
-                    molasses from ships and store it for later transfer by pipeline to the Purity ethanol
-                    plant situated between Willow Street and Evereteze Way in nearby
-                    <a href="https://en.wikipedia.org/wiki/Cambridge,_Massachusetts">Cambridge</a>.
-                    The molasses tank stood 50 feet (15 meters) tall and 90 ft (27 m) in diameter,
-                    and contained as much as 2.3 million US gal (8,700 m3).
-                </p>
-            </section>
+        <section id="causes">
+            <h2>Causes</h2>
 
-            <section id="flood">
-                <h2>Flood</h2>
+            <p>
+                Several factors contributed to the disaster. In the days following the accident,
+                an investigation pointed toward structural failure due to poor construction,
+                inadequate inspection, and unseasonably warm weather causing internal pressure.
+            </p>
 
-                <figure>
-                    <img src="images/BostonAreaMap.png"
-                         alt="Map showing the area around North End Beach and Charlestown Bridge, with the molasses flood area circled"
-                         width="250">
-                    <figcaption>Modern downtown Boston with molasses flood area circled</figcaption>
-                </figure>
+            <p>
+                The tank had been built hastily and tested inadequately. When filled to capacity,
+                the steel used was too thin and lacked sufficient fatigue resistance to hold the load.
+            </p>
+        </section>
 
-                <p>
-                    On January 15, 1919, temperatures in Boston had risen above 40 degrees Fahrenheit
-                    (4 degrees Celsius), climbing rapidly from the frigid temperatures of the preceding days.
-                    On the previous day, a ship had delivered a fresh load of molasses, which had been
-                    warmed to decrease its
-                    <a href="https://en.wikipedia.org/wiki/Viscosity">viscosity</a> for transfer.
-                </p>
+        <section id="area-today">
+            <h2>Area Today</h2>
 
-                <p>
-                    Possibly due to the
-                    <a href="https://en.wikipedia.org/wiki/Thermal">thermal</a> expansion of the older,
-                    colder molasses already inside the tank, the tank burst open and collapsed at
-                    approximately 12:30 p.m. Witnesses reported that they felt the ground shake and
-                    heard a roar as it collapsed, a long rumble similar to the passing of an
-                    <a href="https://en.wikipedia.org/wiki/Elevated_railway">elevated train</a>;
-                    others reported a tremendous crashing, a deep growling, "a thunderclap-like
-                    <em>bang!</em>", and a sound like a machine gun as the
-                    <a href="https://en.wikipedia.org/wiki/Rivet">rivets</a> shot out of the tank.
-                </p>
+            <p>
+                Today, the site of the Purity Distilling Company tank is occupied by a complex
+                of recreational fields known as Puopolo Park and Langone Park. A small plaque
+                at the entrance to the park commemorates the disaster.
+            </p>
+        </section>
 
-                <p>
-                    The density of molasses is about 1.4 metric tons per cubic meter (12 pounds per
-                    US gallon), 40% denser than water, resulting in the molasses having a great deal of
-                    <a href="https://en.wikipedia.org/wiki/Potential_energy">potential energy</a>.
-                    The collapse translated this energy into a wave of molasses 25 ft (8 m) high at
-                    its peak, moving at 35 mph (56 km/h). The wave was of sufficient force to drive
-                    steel panels of the burst tank against the girders of the adjacent
-                    <a href="https://en.wikipedia.org/wiki/Boston_Elevated_Railway">Boston Elevated Railway</a>'s
-                    <a href="https://en.wikipedia.org/wiki/Atlantic_Avenue_Elevated">Atlantic Avenue</a>
-                    structure and tip a streetcar momentarily off the railway's tracks. Stephen Puleo
-                    describes how nearby buildings were swept off their foundations and crushed.
-                    Several blocks were flooded to a depth of 2 to 3 ft (60 to 90 cm). Puleo quotes
-                    a report from <em>The Boston Post</em>:
-                </p>
-</section>
-</article>
-</main>
+        <section id="popular-culture">
+            <h2>In Popular Culture</h2>
+
+            <p>
+                The flood has inspired numerous books, television episodes, and musical compositions,
+                becoming a staple of New England folklore and historical trivia.
+            </p>
+        </section>
+
+        <section id="see-also">
+            <h2>See Also</h2>
+
+            <ul>
+                <li>London Beer Flood</li>
+                <li>Pepsi Fruit Juice Flood</li>
+            </ul>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+
+            <ol>
+                <li>Puleo, Stephen (2004). <em>Dark Tide: The Great Boston Molasses Flood of 1919</em>. Beacon Press.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Historical Archives Project. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
