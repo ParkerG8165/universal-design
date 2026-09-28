@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background-color: #f3f0ec;
+}
+
+header {
+    padding: 3rem 10%;
+    background-color: #4b2e20;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.6rem;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+nav {
+    background-color: #2d211b;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #6b4934;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+}
+
+article {
+    padding: 2.5rem;
+    background-color: white;
+}
+
+article > header {
+    margin: -2.5rem -2.5rem 2.5rem;
+    padding: 1.5rem 2.5rem;
+    background-color: #eee5dc;
+    color: #222;
+}
+
+article > header p {
+    margin: 0;
+}
+
+section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 1rem;
+}
+
+section h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #b47a4f;
+}
+
+section section {
+    margin-bottom: 2rem;
+}
+
+section h3 {
+    margin-top: 2rem;
+}
+
+p {
+    max-width: 75ch;
+}
+
+figure {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+a {
+    color: #603c25;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 2rem 10%;
+    background-color: #2d211b;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 2rem 5%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav a {
+        padding: 0.75rem 1rem;
+    }
+
+    main {
+        padding: 1.5rem 3%;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+
+    article > header {
+        margin: -1.5rem -1.5rem 1.5rem;
+        padding: 1.25rem 1.5rem;
+    }
+}
