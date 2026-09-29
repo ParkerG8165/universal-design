@@ -105,12 +105,26 @@
         li {
             margin-bottom: 6px;
         }
+
+        /* Hide only visually, but have it available for screen readers: */
+        .sr-only {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Great Molasses Flood</h1>
+        <h2 class="sr-only">Header Introduction</h2>
 
         <p>
             The Great Molasses Flood, also known as the Boston Molasses Disaster,
@@ -565,6 +579,8 @@
                 <li>City marks 100th anniversary of Great Molasses Flood (video broadcast from WCVB-TV).</li>
             </ul>
         </section>
+
     </main>
+
 </body>
 </html>
