@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <header>
+        <h1>Accessible Forms</h1>
+    </header>
+    <main>
+        <section>
+            <h2>form example</h2>
+            <form action="myform" method="post">
+                <fieldset>
+                    <legend>Give us your information!</legend>
+                    <label for="username">
+                        what is your name?
+                        <input type="text" id="username" required>
+                    </label>
+
+                    <label for="email">
+                        what is your email?
+                        <input type="email" id="email" required>
+                    </label>
+
+                    <label for="website">
+                        what is your website?
+                        <input type="url" id="website">
+                    </label>
+
+                     <label for="phone">
+                        what is your phone number?
+                        <input type="tel" id="phone" minlength="7">
+                    </label>
+
+                     <label for="age">
+                        how old are you?
+                        <input type="number" id="age" minlength="0" maxlength="120">
+                    </label>
+
+                     <label for="password">
+                        what is your password?
+                        <input type="text" id="password" maxlength="20" minlength="5" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,20}$" required>
+                    </label>
+                    <ul class="inputRequirements">
+                        <li>must be atleast 5 characters and contain uppercase, lower case, number and symbol</li>
+                    </ul>
+
+                    <input type="submit">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
