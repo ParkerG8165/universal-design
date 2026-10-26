@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical guide to planning hikes on Colorado's fourteeners.">
+
+  <title>Colorado's Fourteeners | A Hiker's Field Guide</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+  <style>
+    :root {
+      --forest: #244734;
+      --forest-dark: #173324;
+      --sage: #e5ece3;
+      --cream: #faf8f1;
+      --paper: #ffffff;
+      --blue: #dce9ed;
+      --text: #242b26;
+      --muted: #525d55;
+      --border: #cbd5cb;
+      --focus: #a04a00;
+      --content-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1rem;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #205a42;
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      z-index: 1000;
+      top: -100px;
+      left: 1rem;
+      padding: 0.8rem 1.2rem;
+      background: var(--paper);
+      color: var(--forest-dark);
+      border: 2px solid var(--forest);
+      border-radius: 0 0 8px 8px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px #0002;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .site-header {
+      background: var(--forest-dark);
+      color: white;
+      border-bottom: 4px solid #a9bda7;
+    }
+
+    .header-inner,
+    main,
+    .footer-inner {
+      width: min(var(--content-width), calc(100% - 2.5rem));
+      margin-inline: auto;
+    }
+
+    .header-inner {
+      padding-block: 1.3rem;
+    }
+
+    .site-label {
+      margin: 0;
+      color: #d6e3d6;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .site-header h1 {
+      margin: 0.2rem 0 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      line-height: 1.2;
+    }
+
+    .site-nav {
+      background: var(--forest);
+    }
+
+    .site-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+      width: min(var(--content-width), calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 0.8rem 0;
+      list-style: none;
+    }
+
+    .site-nav a {
+      display: inline-block;
+      padding: 0.35rem 0;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    main {
+      padding-block: 2rem 4rem;
+    }
+
+    section,
+    article,
+    aside {
+      scroll-margin-top: 1rem;
+    }
+
+    .hero {
+      padding: clamp(1.5rem, 5vw, 3.5rem);
+      background: var(--sage);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.6rem;
+      color: var(--forest);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h2,
+    h3 {
+      color: var(--forest-dark);
+      line-height: 1.25;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .hero h2 {
+      max-width: 720px;
+      margin-bottom: 1rem;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+    }
+
+    .hero p {
+      max-width: 700px;
+    }
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .fact-card {
+      padding: 1.5rem;
+      background: var(--blue);
+      border-left: 5px solid var(--forest);
+      border-radius: 8px;
+    }
+
+    .fact-card h3 {
+      margin-top: 0;
+    }
+
+    .fact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .material-symbols-outlined {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.3em;
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    .trail-table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--paper);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    caption {
+      padding: 1rem;
+      background: var(--sage);
+      color: var(--forest-dark);
+      font-weight: 700;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--forest);
+      color: white;
+    }
+
+    tbody th {
+      color: var(--forest-dark);
+      font-weight: 700;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f3f5ef;
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .table-note,
+    .required-note,
+    .help-text {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .checklist {
+      padding-left: 1.5rem;
+    }
+
+    .checklist li {
+      padding: 0.3rem 0;
+    }
+
+    .planning-form {
+      padding: clamp(1rem, 4vw, 2rem);
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    fieldset {
+      min-width: 0;
+      margin: 0 0 1.75rem;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    legend {
+      padding: 0 0.5rem;
+      color: var(--forest-dark);
+      font-weight: 700;
+    }
+
+    .form-field {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-field:last-child {
+      margin-bottom: 0;
+    }
+
+    label,
+    .group-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      padding: 0.75rem;
+      background: white;
+      color: var(--text);
+      border: 1px solid #68786b;
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin: 0.2rem 0.6rem 0 0;
+      accent-color: var(--forest);
+    }
+
+    .choice {
+      display: flex;
+      align-items: flex-start;
+      margin: 0.65rem 0;
+    }
+
+    .choice label {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      background: var(--forest);
+      color: white;
+      border: 2px solid var(--forest);
+      border-radius: 6px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--forest-dark);
+    }
+
+    .resource-list li {
+      margin-bottom: 0.7rem;
+    }
+
+    .back-to-top {
+      margin-top: 2rem;
+      text-align: right;
+    }
+
+    .site-footer {
+      padding: 2rem 0;
+      background: var(--forest-dark);
+      color: white;
+    }
+
+    .site-footer a {
+      color: white;
+    }
+
+    .footer-inner p {
+      margin: 0.4rem 0;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    @media (max-width: 700px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .site-nav ul {
+        gap: 0.2rem 1rem;
+      }
+
+      th,
+      td {
+        padding: 0.7rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      .site-nav,
+      .skip-link,
+      .back-to-top,
+      .planning-form {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      .hero,
+      .fact-card {
+        background: white;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <section class="header-inner" aria-labelledby="page-title">
+      <p class="site-label">A Colorado outdoor field guide</p>
+      <h1 id="page-title">Colorado's Fourteeners</h1>
+      <p>A practical guide to planning a mountain adventure.</p>
+    </section>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#trail-comparison">Trail comparison</a></li>
+        <li><a href="#preparation">Preparation</a></li>
+        <li><a href="#plan-a-hike">Plan a hike</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="hero" aria-labelledby="welcome-heading">
+      <p class="eyebrow">Above 14,000 feet</p>
+      <h2 id="welcome-heading">Big mountains. Better preparation.</h2>
+      <p>
+        Colorado's fourteeners are mountains whose summits rise above
+        14,000 feet. They offer incredible views, demanding climbs, and
+        a reason to learn about weather, terrain, and responsible outdoor
+        recreation before leaving the trailhead.
+      </p>
+      <p>
+        Whether you are working toward your first summit or comparing
+        routes for a future trip, use this guide to start planning.
+      </p>
+    </section>
+
+    <section id="introduction" class="section" aria-labelledby="intro-heading">
+      <h2 id="intro-heading">What makes a fourteener different?</h2>
+
+      <section class="intro-grid" aria-label="Introduction and mountain fact">
+        <article>
+          <h3>Altitude changes the experience</h3>
+          <p>
+            At high elevations, there is less oxygen available with each
+            breath. A familiar trail can feel much harder when it climbs
+            above tree line, where shade and shelter become limited.
+            Fitness helps, but it does not eliminate the risks associated
+            with altitude.
+          </p>
+
+          <h3>The summit is only half the journey</h3>
+          <p>
+            Hikers need enough daylight, energy, water, and weather
+            awareness to return safely. Reaching the top is never more
+            important than making a good decision about when to turn
+            around.
+          </p>
+        </article>
+
+        <aside class="fact-card" aria-labelledby="fact-heading">
+          <h3 id="fact-heading">
+            <span class="material-symbols-outlined" aria-hidden="true">landscape</span>
+            A useful fact
+          </h3>
+          <p>
+            Colorado has more than 50 commonly recognized fourteeners.
+            The exact count depends on the criteria used to distinguish
+            independent summits from nearby subsidiary peaks.
+          </p>
+          <p>
+            <strong>Planning principle:</strong> Choose a route based on
+            conditions and experience, not elevation alone.
+          </p>
+        </aside>
+      </section>
+    </section>
+
+    <section id="trail-comparison" class="section" aria-labelledby="table-heading">
+      <h2 id="table-heading">Compare popular Colorado fourteeners</h2>
+      <p>
+        These well-known routes illustrate how distance and terrain vary.
+        Round-trip distances are approximate and can differ by route,
+        trailhead, and navigation choices.
+      </p>
+
+      <section class="trail-table-wrapper" aria-label="Mountain comparison data">
+        <table>
+          <caption>
+            Selected Colorado fourteeners: summit elevation and approximate
+            round-trip hiking distance
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Mountain</th>
+              <th scope="col">Elevation (feet)</th>
+              <th scope="col">Approximate round-trip distance</th>
+              <th scope="col">General route character</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mount Bierstadt</th>
+              <td>14,060</td>
+              <td>About 7 miles</td>
+              <td>Popular hiking route with a defined trail for much of the climb.</td>
+            </tr>
+            <tr>
+              <th scope="row">Grays Peak</th>
+              <td>14,278</td>
+              <td>About 8 miles</td>
+              <td>Steep hiking terrain; often combined with nearby Torreys Peak.</td>
+            </tr>
+            <tr>
+              <th scope="row">Torreys Peak</th>
+              <td>14,275</td>
+              <td>About 8–9 miles</td>
+              <td>Often climbed as part of the Grays and Torreys combination.</td>
+            </tr>
+            <tr>
+              <th scope="row">Mount Yale</th>
+              <td>14,196</td>
+              <td>About 9.5 miles</td>
+              <td>Sustained uphill hiking with increasingly rocky terrain.</td>
+            </tr>
+            <tr>
+              <th scope="row">Longs Peak</th>
+              <td>14,259</td>
+              <td>About 14–15 miles</td>
+              <td>A long, committing alpine route with significant exposure and scrambling.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <p class="table-note">
+        These figures are planning estimates, not current trail reports.
+        Confirm the route, trailhead access, and conditions before your trip.
+        Difficulty depends on weather, fitness, altitude response, and experience.
+      </p>
+    </section>
+
+    <section id="preparation" class="section" aria-labelledby="prep-heading">
+      <h2 id="prep-heading">Prepare before leaving home</h2>
+
+      <article>
+        <h3>Check the mountain forecast</h3>
+        <p>
+          Mountain weather can change rapidly. Thunderstorms, high winds,
+          snow, and low visibility can make exposed terrain dangerous.
+          Check an appropriate mountain forecast before leaving and
+          reassess conditions throughout the day.
+        </p>
+      </article>
+
+      <article>
+        <h3>Pack for changing conditions</h3>
+        <ul class="checklist">
+          <li>Carry enough water and food for the expected trip and delays.</li>
+          <li>Bring insulating layers and rain protection.</li>
+          <li>Pack a map, navigation device, and backup power as appropriate.</li>
+          <li>Carry a headlamp, first-aid supplies, and emergency essentials.</li>
+          <li>Wear footwear suited to the terrain and current conditions.</li>
+          <li>Tell someone your route and expected return time.</li>
+        </ul>
+      </article>
+
+      <aside class="fact-card" aria-labelledby="turnaround-heading">
+        <h3 id="turnaround-heading">
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+          Set a turnaround time
+        </h3>
+        <p>
+          Decide in advance when you will head back, even if you have not
+          reached the summit. Turn around earlier if storms approach,
+          visibility deteriorates, someone feels unwell, or progress is
+          slower than expected.
+        </p>
+      </aside>
+    </section>
+
+    <section id="plan-a-hike" class="section" aria-labelledby="form-heading">
+      <h2 id="form-heading">Plan your next hike</h2>
+      <p>
+        Use this sample planning form to organize your preferences.
+        Fields marked with an asterisk are required.
+      </p>
+
+      <form class="planning-form" action="#plan-a-hike" method="get">
+        <p class="required-note">
+          An asterisk (*) identifies a required field.
+        </p>
+
+        <fieldset>
+          <legend>Trip details</legend>
+
+          <section class="form-field">
+            <label for="hiker-name">Your name *</label>
+            <input
+              type="text"
+              id="hiker-name"
+              name="hiker-name"
+              autocomplete="name"
+              required
+            >
+          </section>
+
+          <section class="form-field">
+            <label for="hike-date">Planned hiking date *</label>
+            <input
+              type="date"
+              id="hike-date"
+              name="hike-date"
+              required
+            >
+          </section>
+
+          <section class="form-field">
+            <label for="mountain">Mountain of interest *</label>
+            <select id="mountain" name="mountain" required>
+              <option value="">Choose a mountain</option>
+              <option value="bierstadt">Mount Bierstadt</option>
+              <option value="grays">Grays Peak</option>
+              <option value="torreys">Torreys Peak</option>
+              <option value="yale">Mount Yale</option>
+              <option value="longs">Longs Peak</option>
+              <option value="undecided">Still deciding</option>
+            </select>
+          </section>
+        </fieldset>
+
+        <fieldset>
+          <legend>Experience and preferences</legend>
+
+          <p class="group-label">How would you describe your hiking experience? *</p>
+
+          <section class="choice">
+            <input type="radio" id="beginner" name="experience" value="beginner" required>
+            <label for="beginner">Beginner — building hiking experience</label>
+          </section>
+
+          <section class="choice">
+            <input type="radio" id="intermediate" name="experience" value="intermediate">
+            <label for="intermediate">Intermediate — comfortable with longer hikes</label>
+          </section>
+
+          <section class="choice">
+            <input type="radio" id="experienced" name="experience" value="experienced">
+            <label for="experienced">Experienced — familiar with alpine terrain</label>
+          </section>
+
+          <p class="group-label">What would you like to prepare for?</p>
+
+          <section class="choice">
+            <input type="checkbox" id="weather" name="priorities" value="weather">
+            <label for="weather">Mountain weather and changing conditions</label>
+          </section>
+
+          <section class="choice">
+            <input type="checkbox" id="navigation" name="priorities" value="navigation">
+            <label for="navigation">Navigation and route-finding</label>
+          </section>
+
+          <section class="choice">
+            <input type="checkbox" id="fitness" name="priorities" value="fitness">
+            <label for="fitness">Endurance and pacing</label>
+          </section>
+
+          <section class="choice">
+            <input type="checkbox" id="gear" name="priorities" value="gear">
+            <label for="gear">Gear and packing checklist</label>
+          </section>
+        </fieldset>
+
+        <section class="form-field">
+          <label for="notes">Additional planning notes (optional)</label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            aria-describedby="notes-help"
+          ></textarea>
+          <p id="notes-help" class="help-text">
+            For example, describe your goals or questions about the route.
+          </p>
+        </section>
+
+        <button class="button" type="submit">Review my planning details</button>
+
+        <p class="help-text">
+          This demonstration form submits its fields through the page URL.
+          It does not save your trip to a database or send an email.
+        </p>
+      </form>
+    </section>
+
+    <section id="resources" class="section" aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Reliable resources for your trip</h2>
+      <p>
+        Use official land-management information and current forecasts
+        instead of relying only on old trip reports.
+      </p>
+
+      <ul class="resource-list">
+        <li>
+          <a href="https://www.14ers.com/" target="_blank" rel="noopener noreferrer">
+            14ers.com
+          </a>
+          — route descriptions, trailhead information, and hiking community resources.
+        </li>
+        <li>
+          <a href="https://www.weather.gov/" target="_blank" rel="noopener noreferrer">
+            National Weather Service
+          </a>
+          — weather forecasts and alerts.
+        </li>
+        <li>
+          <a href="https://www.fs.usda.gov/" target="_blank" rel="noopener noreferrer">
+            USDA Forest Service
+          </a>
+          — information about public lands, closures, and recreation areas.
+        </li>
+        <li>
+          <a href="https://www.nps.gov/" target="_blank" rel="noopener noreferrer">
+            National Park Service
+          </a>
+          — park alerts, regulations, and safety information for applicable areas.
+        </li>
+      </ul>
+
+      <p>
+        Always verify the managing agency for your specific route, since
+        access rules and closures vary by location.
+      </p>
+    </section>
+
+    <nav class="back-to-top" aria-label="Return navigation">
+      <a href="#top">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+        Back to top
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <section class="footer-inner" aria-label="About this website">
+      <p><strong>Colorado's Fourteeners</strong> — A Hiker's Field Guide</p>
+      <address>
+        An educational web project about mountain recreation and accessibility.
+      </address>
+      <p>Check current trail conditions before planning a trip.</p>
+    </section>
+  </footer>
+
+</body>
+</html>
