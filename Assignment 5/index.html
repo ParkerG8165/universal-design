@@ -16,6 +16,17 @@ nav ul { display:flex; flex-wrap:wrap; gap:20px; padding:0; list-style:none; }
 nav a { color:inherit; }
 .skip { position:absolute; top:-100px; background:white; padding:10px; }
 .skip:focus { top:0; }
+.visually-hidden {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip-path:inset(50%);
+  white-space:nowrap;
+  border:0;
+}
 a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible { outline:3px solid #a04a00; }
 section { margin:25px 0; }
 table { border-collapse:collapse; width:100%; background:white; }
@@ -24,17 +35,24 @@ th { background:#e5ece3; }
 label { display:block; margin-top:10px; }
 input,select,textarea { max-width:100%; padding:7px; }
 .material-symbols-outlined { vertical-align:middle; }
-@media(max-width:600px) { body { padding:10px; } table { font-size:0.85rem; } th,td { padding:5px; } }
+@media(max-width:600px) {
+  body { padding:10px; }
+  table { font-size:0.85rem; }
+  th,td { padding:5px; }
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
+
 <header>
 <p>COLORADO HIKING</p>
 <h1>Colorado Fourteeners</h1>
 <p>A beginner's guide to big mountain hiking</p>
 </header>
+
 <nav aria-label="Main navigation">
+<h2 class="visually-hidden">Main navigation</h2>
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#trails">Compare trails</a></li>
@@ -42,19 +60,26 @@ input,select,textarea { max-width:100%; padding:7px; }
 <li><a href="#planning">Plan a hike</a></li>
 </ul>
 </nav>
+
 <main id="main" tabindex="-1">
 <section id="about">
 <h2>What is a fourteener?</h2>
 <p>A fourteener is a mountain summit above 14,000 feet. Colorado's peaks vary widely in distance, elevation gain, and technical difficulty. Comparing these factors helps hikers understand what a route involves.</p>
 <p><span class="material-symbols-outlined" aria-hidden="true">landscape</span> Preparation matters: plan for the return journey, not just reaching the summit.</p>
 </section>
+
 <section id="trails">
 <h2>Compare five Colorado fourteeners</h2>
 <p>The overall rank combines route difficulty with factors such as terrain and distance. Rank #1 is easiest; #58 is hardest.</p>
 <table>
 <caption>Standard routes ordered by overall difficulty</caption>
 <thead>
-<tr><th scope="col">Mountain</th><th scope="col">Difficulty rank</th><th scope="col">Scrambling class</th><th scope="col">Round-trip distance</th></tr>
+<tr>
+<th scope="col">Mountain</th>
+<th scope="col">Difficulty rank</th>
+<th scope="col">Scrambling class (1-5)</th>
+<th scope="col">Round-trip distance</th>
+</tr>
 </thead>
 <tbody>
 <tr><th scope="row">Handies Peak</th><td>#1 of 58</td><td>Class 1</td><td>5.75 miles</td></tr>
@@ -67,6 +92,7 @@ input,select,textarea { max-width:100%; padding:7px; }
 <p>Class 1 is mostly hiking; Class 2 involves rough terrain and occasional hand use; Class 3 requires scrambling; Class 4 involves more exposed climbing terrain. Distance and class do not capture every challenge, including elevation gain, weather, and exposure.</p>
 <p>Source: <a href="https://www.14ers.com/routes_bydifficulty.php">14ers.com difficulty rankings</a>.</p>
 </section>
+
 <section id="safety">
 <h2>Before you go</h2>
 <ul>
@@ -77,6 +103,7 @@ input,select,textarea { max-width:100%; padding:7px; }
 </ul>
 <p>For exposed or technical routes, learn about the terrain and appropriate safety precautions before attempting them.</p>
 </section>
+
 <section id="planning">
 <h2>Plan a hike</h2>
 <form action="#planning" method="get">
@@ -84,6 +111,7 @@ input,select,textarea { max-width:100%; padding:7px; }
 <legend>Your hiking plans</legend>
 <label for="name">Name (required)</label>
 <input id="name" name="name" autocomplete="name" required>
+
 <label for="mountain">Choose a mountain (required)</label>
 <select id="mountain" name="mountain" required>
 <option value="">Select a mountain</option>
@@ -93,23 +121,29 @@ input,select,textarea { max-width:100%; padding:7px; }
 <option>Longs Peak</option>
 <option>Capitol Peak</option>
 </select>
+
 <fieldset>
 <legend>Experience level (required)</legend>
 <label><input type="radio" name="experience" value="beginner" required> Beginner</label>
 <label><input type="radio" name="experience" value="experienced"> Experienced</label>
 </fieldset>
+
 <label for="notes">Planning notes (optional)</label>
 <textarea id="notes" name="notes"></textarea>
 <button type="submit">Submit</button>
 </fieldset>
 </form>
 </section>
+
 <section id="resources">
 <h2>Useful resources</h2>
 <p><a href="https://www.14ers.com/">14ers.com</a> — route descriptions and difficulty information.</p>
 <p><a href="https://www.weather.gov/">National Weather Service</a> — mountain weather forecasts.</p>
 </section>
 </main>
-<footer><p>Colorado fourteenershiking guide</p></footer>
+
+<footer>
+<p>Colorado Fourteeners hiking guide</p>
+</footer>
 </body>
 </html>
