@@ -105,6 +105,12 @@
             align-items: flex-start;
         }
 
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
         article p {
             font-size: 1.05rem;
             color: var(--text-dark);
@@ -112,21 +118,21 @@
 
         figure {
             margin: 0;
+            flex-shrink: 0;
         }
 
         .profile-avatar {
             width: 140px;
             height: 140px;
-            border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--primary-blue);
+            border-radius: 4px;
             background-color: var(--border-gray);
         }
 
         @media (min-width: 600px) {
             article {
                 flex-direction: row;
-                align-items: center;
+                align-items: flex-start;
             }
         }
 
@@ -180,11 +186,16 @@
             <h2>About Me</h2>
             <article>
                 <figure>
-<img src="ParkerGayPortrait.jpg" alt="Photo of me" class="profile-avatar">
+                    <img src="ParkerGayPortrait.jpg" alt="Portrait photo of Parker Gay smiling outdoors" class="profile-avatar">
                 </figure>
-                <p>
-                    I am a senior Creative Technology and Design major, and in my free time I enjoy skiing, mountain biking, photography, making art, playing and watching soccer, hiking, traveling, and camping.
-                </p>
+                <div class="about-text">
+                    <p>
+                        I am a senior Creative Technology and Design major, and in my free time I enjoy skiing, mountain biking, photography, making art, playing and watching soccer, hiking, traveling, and camping. I have lived in Massachusetts my entire life, as I lived in Byfield, Massachusetts until 7th grade when I moved to Newburyport, Massachusetts. I have a younger brother who also goes to school at the University of Colorado, Boulder.
+                    </p>
+                    <p>
+                        I have always loved art and design since a young age, but my main goal was always to become a sneaker designer since I love shoes. After college I plan to work in the footwear design industry, or any other design centered career I can obtain within the worlds of sports, fashion, and the outdoors.
+                    </p>
+                </div>
             </article>
         </section>
 
