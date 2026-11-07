@@ -1,49 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Parker Gay Landing Site</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parker Gay Landing Site</title>
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-dark: #121212;
+      --text-muted: #4a5568;
+      --primary-blue: #0f4c81;
+      --primary-blue-hover: #0a3256;
+      --border-gray: #e2e8f0;
+      --focus-ring: #2563eb;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--bg-color);
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -50px;
+      left: 1rem;
+      background: var(--text-dark);
+      color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      z-index: 100;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: top 0.2s ease-in-out;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+      outline: 3px solid var(--focus-ring);
+    }
+
+    a:focus, button:focus {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 3px;
+    }
+
+    header {
+      background-color: var(--text-dark);
+      color: #ffffff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      border-bottom: 4px solid var(--primary-blue);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e0;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    section, nav {
+      background: var(--card-bg);
+      border: 1px solid var(--border-gray);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--border-gray);
+      padding-bottom: 0.5rem;
+    }
+
+    section article {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    section article p {
+      font-size: 1.05rem;
+      color: var(--text-dark);
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .profile-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-blue);
+      background-color: var(--border-gray);
+    }
+
+    @media (min-width: 600px) {
+      section article {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    nav li a {
+      display: block;
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 1.05rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      background-color: #f1f5f9;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    nav li a:hover {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-gray);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
 <body>
 
-<header>
-    <h1 style="color: black; font-size: 20px; font-family: Helvetica Neue; text-align: center">
-        <strong>Hi, My name is Parker Gay!</strong>
-    </h1>
-    <p style="color: rgb(55, 50, 50); font-size: 14px; font-family: Helvetica Neue; text-align: center">
-        ATLS-CSCI 3150-001
-    </p>
-</header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<main>
+  <header>
+    <h1>Hi, My name is Parker Gay!</h1>
+    <p>ATLS-CSCI 3150-001</p>
+  </header>
 
-    <section>
-        <h2>About Me</h2>
+  <main id="main-content">
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <article>
         <p>
-            I am a senior Creative Technology and Design major, and in my free time I enjoy skiing, mountain biking, photography, making art, playing and watching soccer, hiking, traveling, and camping.
+          I am a senior Creative Technology and Design major, and in my free time I enjoy skiing, mountain biking, photography, making art, playing and watching soccer, hiking, traveling, and camping.
         </p>
+      </article>
     </section>
-    
-<nav aria-label="Class Assignments Navigation">
-    <h2>Class Assignments</h2>
-    <ul>
-        <li>
-            <a href="https://parkerg8165.github.io/universal-design/wikipediapage/">Semantic Html5</a>
-        </li>
-        <li>
-            <a href="wikipediapage/part2.html">Semantic Html5 Part 2</a>
-        </li>
-        <li>
-            <a href="Assignment5/index.html">Tables, Forms, Tab Browsing, and Screen Reading</a>
-        </li>
-        <li>
-            <a href="Assignment6/index.html">Accessible CSS Layout</a>
-        </li>
-    </ul>
-</nav>
 
-</main>
+    <nav aria-labelledby="assignments-heading">
+      <h2 id="assignments-heading">Class Assignments</h2>
+      <ul>
+        <li><a href="semantic-html5/">Lab 1: Semantic Html5</a></li>
+        <li><a href="semantic-html5-part-2/">Lab 2: Semantic Html5 Part 2</a></li>
+        <li><a href="tables-forms-tab-browsing-and-screen-reading/">Lab 3: Tables, Forms, Tab Browsing, and Screen Reading</a></li>
+        <li><a href="accessible-css-layout/">Lab 4: Accessible CSS Layout</a></li>
+      </ul>
+    </nav>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Parker Gay</p>
+  </footer>
 
 </body>
 </html>
