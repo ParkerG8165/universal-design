@@ -53,6 +53,18 @@
             outline-offset: 3px;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         header {
             background-color: var(--text-dark);
             color: #ffffff;
@@ -105,7 +117,7 @@
             align-items: flex-start;
         }
 
-        .about-text {
+        .biography {
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -182,35 +194,44 @@
 
     <main id="main-content">
 
-        <section>
-            <h2>About Me</h2>
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+
             <article>
+                <h3 class="sr-only">About Me</h3>
+
                 <figure>
-                    <img src="ParkerGayPortrait.jpg" alt="Photo of me" class="profile-avatar">
+                    <img src="ParkerGayPortrait.jpeg" alt="Photo of me" class="profile-avatar">
                 </figure>
-                <div class="about-text">
+
+                <section class="biography" aria-label="Biography">
                     <p>
                         I am a senior Creative Technology and Design major, and in my free time I enjoy skiing, mountain biking, photography, making art, playing and watching soccer, hiking, traveling, and camping. I have lived in Massachusetts my entire life, as I lived in Byfield, Massachusetts until 7th grade when I moved to Newburyport, Massachusetts. I have a younger brother who also goes to school at the University of Colorado, Boulder.
                     </p>
+
                     <p>
                         I have always loved art and design since a young age, but my main goal was always to become a sneaker designer since I love shoes. After college I plan to work in the footwear design industry, or any other design centered career I can obtain within the worlds of sports, fashion, and the outdoors.
                     </p>
-                </div>
+                </section>
             </article>
         </section>
 
         <nav aria-label="Class Assignments Navigation">
             <h2>Class Assignments</h2>
+
             <ul>
                 <li>
                     <a href="https://parkerg8165.github.io/universal-design/wikipediapage/">Lab 1: Semantic Html5</a>
                 </li>
+
                 <li>
                     <a href="wikipediapage/part2.html">Lab 2: Semantic Html5 Part 2</a>
                 </li>
+
                 <li>
                     <a href="Assignment5/index.html">Lab 3: Tables, Forms, Tab Browsing, and Screen Reading</a>
                 </li>
+
                 <li>
                     <a href="Assignment6/index.html">Lab 4: Accessible CSS Layout</a>
                 </li>
