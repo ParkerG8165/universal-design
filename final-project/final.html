@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Inclusive Web Design Guide</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-container">
+      <p class="site-title"><a href="#home" data-route="home">Inclusive Web Design</a></p>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home" data-route="home" aria-current="page">Home</a></li>
+          <li><a href="#what" data-route="what">What</a></li>
+          <li><a href="#why" data-route="why">Why</a></li>
+          <li><a href="#how" data-route="how">How</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!--HOME-->
+    <div id="page-home" class="page-view">
+      <h1 tabindex="-1">Building an Accessible Web for Everyone</h1>
+      <p>
+        Accessible web design ensures that websites, tools, and technologies are designed and developed so that people with disabilities can perceive, understand, navigate, and interact with the web effectively. Explore the core foundations below.
+      </p>
+
+      <section aria-labelledby="content-map-heading">
+        <h2 id="content-map-heading">Site Content Map</h2>
+        <div class="grid-container">
+          <article class="card">
+            <h3>What: Core Concepts</h3>
+            <p>Explore the foundational theories and technical specifications behind human-centered interfaces.</p>
+            <ul>
+              <li>Norman’s design concepts</li>
+              <li>User-centered design</li>
+              <li>WAI-ARIA</li>
+              <li>Interaction design theory</li>
+            </ul>
+            <a href="#what" data-route="what" class="btn">Explore What</a>
+          </article>
+
+          <article class="card">
+            <h3>Why: The Human &amp; Digital Impact</h3>
+            <p>Understand the real-world necessity of inclusive standards across devices and populations.</p>
+            <ul>
+              <li>Disability demographics</li>
+              <li>Mobile web</li>
+              <li>Accessibility</li>
+            </ul>
+            <a href="#why" data-route="why" class="btn">Explore Why</a>
+          </article>
+
+          <article class="card">
+            <h3>How: Practical Implementation</h3>
+            <p>Learn clean, semantic coding techniques to make layouts, data, and inputs universally usable.</p>
+            <ul>
+              <li>Forms and tables</li>
+              <li>Accessible CSS</li>
+              <li>Grids and Flexbox</li>
+            </ul>
+            <a href="#how" data-route="how" class="btn">Explore How</a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!--WHAT-->
+    <div id="page-what" class="page-view" hidden>
+      <h1 tabindex="-1">What: Foundational Concepts &amp; Standards</h1>
+      <p>Understanding how humans perceive and interact with digital interfaces starts with established design principles and assistive specifications.</p>
+
+      <section class="topic-section" aria-labelledby="norman-heading">
+        <h2 id="norman-heading">Norman’s Design Concepts</h2>
+        <p>
+          Introduced by cognitive scientist Don Norman, these principles explain how users intuitively understand physical and digital objects:
+        </p>
+        <ul>
+          <li><strong>Affordances:</strong> The possible actions an object allows (e.g., a button affords clicking or pressing).</li>
+          <li><strong>Signifiers:</strong> Visual or auditory cues that communicate where the action should take place (e.g., underlines on links, contrast borders on buttons).</li>
+          <li><strong>Feedback:</strong> Immediate, clear responses confirming that an action occurred (e.g., focus rings, form submission alerts).</li>
+          <li><strong>Conceptual Models:</strong> Designing interfaces that match the user’s mental expectation of how a system works.</li>
+        </ul>
+      </section>
+
+      <section class="topic-section" aria-labelledby="ucd-heading">
+        <h2 id="ucd-heading">User-Centered Design (UCD)</h2>
+        <p>
+          User-Centered Design is an iterative design framework that places real users—including people with visual, auditory, motor, and cognitive disabilities—at the center of every stage of product development. Rather than forcing users to adapt to technology, UCD relies on user research, usability testing, and continuous feedback to build intuitive experiences.
+        </p>
+      </section>
+
+      <section class="topic-section" aria-labelledby="aria-heading">
+        <h2 id="aria-heading">WAI-ARIA</h2>
+        <p>
+          <strong>Web Accessibility Initiative – Accessible Rich Internet Applications (WAI-ARIA)</strong> is a technical specification published by the W3C. It bridges accessibility gaps in dynamic web content and custom UI components (such as tabs, modals, and live regions) by supplying semantic <em>roles</em>, <em>states</em>, and <em>properties</em> to assistive technologies like screen readers when native HTML is insufficient.
+        </p>
+      </section>
+
+      <section class="topic-section" aria-labelledby="ixd-heading">
+        <h2 id="ixd-heading">Interaction Design Theory</h2>
+        <p>
+          Interaction Design (IxD) focuses on the dialogue between a person and a system. Key dimensions include words, visual representations, physical objects/space (such as touchscreens or keyboards), time, and behavior. Strong IxD minimizes cognitive load, prevents user errors, and ensures predictable navigation pathways across all input methods.
+        </p>
+      </section>
+    </div>
+
+    <!--WHY-->
+    <div id="page-why" class="page-view" hidden>
+      <h1 tabindex="-1">Why: Demographics, Mobile &amp; Inclusion</h1>
+      <p>Designing accessibly is not an edge-case consideration—it directly impacts billions of users and improves usability across every device.</p>
+
+      <section class="topic-section" aria-labelledby="demographics-heading">
+        <h2 id="demographics-heading">Disability Demographics</h2>
+        <p>
+          According to the World Health Organization (WHO), over <strong>1.3 billion people</strong>—roughly 16% of the global population—experience significant disability. In the United States alone, more than 1 in 4 adults live with a disability affecting mobility, cognition, hearing, or vision. Furthermore, disabilities can be:
+        </p>
+        <ul>
+          <li><strong>Permanent:</strong> Blindness, deafness, or limb loss.</li>
+          <li><strong>Temporary:</strong> A broken arm, ear infection, or recovery from eye surgery.</li>
+          <li><strong>Situational:</strong> Reading a screen in bright sunlight, holding a baby in one arm, or watching video in a noisy environment.</li>
+        </ul>
+      </section>
+
+      <section class="topic-section" aria-labelledby="mobile-heading">
+        <h2 id="mobile-heading">Mobile Web</h2>
+        <p>
+          The majority of global web traffic originates on mobile devices. Mobile browsing shares direct overlap with accessibility principles: small viewports require reflowable layouts without horizontal scrolling, touchscreens demand generous target sizes and spacing, and outdoor environments require high color contrast to remain legible.
+        </p>
+      </section>
+
+      <section class="topic-section" aria-labelledby="accessibility-heading">
+        <h2 id="accessibility-heading">Accessibility as a Core Standard</h2>
+        <p>
+          Web accessibility is both a civil right and a catalyst for better engineering. Adherence to the Web Content Accessibility Guidelines (WCAG) reduces legal risk, strengthens search engine optimization (SEO) through clean semantic markup, and delivers faster, clearer interfaces for every visitor regardless of ability or device.
+        </p>
+      </section>
+    </div>
+
+    <!--HOW-->
+    <div id="page-how" class="page-view" hidden>
+      <h1 tabindex="-1">How: Accessible Code &amp; Layout Techniques</h1>
+      <p>Practical HTML and CSS patterns ensure assistive technologies can parse content accurately while keeping visual layouts clean and responsive.</p>
+
+      <section class="topic-section" aria-labelledby="forms-tables-heading">
+        <h2 id="forms-tables-heading">Forms and Tables</h2>
+        <p>
+          Data tables and user input forms require explicit programmatic relationships so screen readers can announce headers and labels accurately.
+        </p>
+        <ul>
+          <li><strong>Tables:</strong> Always include a <code>&lt;caption&gt;</code>, use <code>&lt;th&gt;</code> elements for headers, and define <code>scope="col"</code> or <code>scope="row"</code>.</li>
+          <li><strong>Forms:</strong> Pair every input with a visible <code>&lt;label&gt;</code> using matching <code>for</code> and <code>id</code> attributes, and group related controls with <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>.</li>
+        </ul>
+
+        <div class="table-wrapper">
+          <table>
+            <caption>Palette Contrast Ratios Against Cream Background (#FAF8F5)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Color Role</th>
+                <th scope="col">Hex Code</th>
+                <th scope="col">Contrast Ratio</th>
+                <th scope="col">WCAG Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Deep Navy Blue</th>
+                <td>#0F2C59</td>
+                <td>13.5 : 1</td>
+                <td>AAA (Pass)</td>
+              </tr>
+              <tr>
+                <th scope="row">Charcoal Grey</th>
+                <td>#2D343A</td>
+                <td>11.8 : 1</td>
+                <td>AAA (Pass)</td>
+              </tr>
+              <tr>
+                <th scope="row">Ocean Accent Blue</th>
+                <td>#16508E</td>
+                <td>7.6 : 1</td>
+                <td>AAA (Pass)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Accessible Form Example</h3>
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Form submitted accessibly!');">
+          <div class="form-group">
+            <label for="user-name">Full Name (Required)</label>
+            <input type="text" id="user-name" name="user-name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email Address (Required)</label>
+            <input type="email" id="user-email" name="user-email" required autocomplete="email">
+          </div>
+          <button type="submit">Send Feedback</button>
+        </form>
+      </section>
+
+      <section class="topic-section" aria-labelledby="css-heading">
+        <h2 id="css-heading">Accessible CSS</h2>
+        <p>
+          CSS controls visual presentation without altering document semantics. Best practices include:
+        </p>
+        <ul>
+          <li><strong>Color Contrast:</strong> Maintain at least a 4.5:1 contrast ratio for body text and 3:1 for large text and UI borders. Never convey meaning by color alone.</li>
+          <li><strong>Visible Focus States:</strong> Never remove browser outlines without providing a high-contrast <code>:focus-visible</code> replacement for keyboard users.</li>
+          <li><strong>Relative Units &amp; Motion:</strong> Use <code>rem</code> and <code>em</code> units so text scales smoothly when users zoom to 200%, and wrap animations in <code>@media (prefers-reduced-motion: reduce)</code>.</li>
+        </ul>
+      </section>
+
+      <section class="topic-section" aria-labelledby="layout-heading">
+        <h2 id="layout-heading">Grids and Flexbox</h2>
+        <p>
+          Modern CSS Grid and Flexbox replace brittle HTML table layouts while supporting responsive reflow across screen sizes. However, visual order must match DOM source order—avoid using CSS <code>order</code> or <code>flex-direction: row-reverse</code> to rearrange interactive elements, as keyboard focus follows the HTML source order rather than the visual layout.
+        </p>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+
+  <
+  <script>
+    const routes = {
+      home: { id: 'page-home', title: 'Home | Inclusive Web Design Guide' },
+      what: { id: 'page-what', title: 'What | Inclusive Web Design Guide' },
+      why:  { id: 'page-why',  title: 'Why | Inclusive Web Design Guide' },
+      how:  { id: 'page-how',  title: 'How | Inclusive Web Design Guide' }
+    };
+
+    function showPage(routeName, moveFocus = true) {
+      const target = routes[routeName] ? routeName : 'home';
+
+
+      Object.entries(routes).forEach(([name, info]) => {
+        const el = document.getElementById(info.id);
+        el.hidden = (name !== target);
+      });
+
+
+      document.querySelectorAll('nav a[data-route]').forEach(link => {
+        if (link.dataset.route === target) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+
+   
+      document.title = routes[target].title;
+      window.scrollTo(0, 0);
+
+
+      if (moveFocus) {
+        const heading = document.querySelector(`#${routes[target].id} h1`);
+        if (heading) heading.focus();
+      }
+    }
+
+
+    document.querySelectorAll('a[data-route]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const route = link.dataset.route;
+        history.pushState(null, '', `#${route}`);
+        showPage(route, true);
+      });
+    });
+
+
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.replace('#', '');
+      showPage(hash, true);
+    });
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const initialHash = window.location.hash.replace('#', '');
+      if (initialHash && routes[initialHash]) {
+        showPage(initialHash, false);
+      }
+    });
+  </script>
+</body>
+</html>
